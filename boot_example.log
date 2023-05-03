@@ -1,0 +1,891 @@
+2023-05-02 15:32:06.924  INFO 734876 --- [main] c.k.example.test.HotelControllerTest     : Starting HotelControllerTest on adi123 with PID 734876 (started by aditya in /home/aditya/Documents/sbapp/spring-boot-rest-example)
+2023-05-02 15:32:06.925  INFO 734876 --- [main] c.k.example.test.HotelControllerTest     : The following profiles are active: test
+2023-05-02 15:32:06.959  INFO 734876 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Tue May 02 15:32:06 IST 2023]; root of context hierarchy
+2023-05-02 15:32:08.365  INFO 734876 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e4a4584c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-02 15:32:09.015  INFO 734876 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2023-05-02 15:32:09.035  INFO 734876 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-05-02 15:32:09.219  INFO 734876 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2023-05-02 15:32:09.220  INFO 734876 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2023-05-02 15:32:09.221  INFO 734876 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2023-05-02 15:32:09.262  INFO 734876 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2023-05-02 15:32:09.376  INFO 734876 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-02 15:32:09.793  INFO 734876 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-02 15:32:09.803  INFO 734876 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-02 15:32:09.829  INFO 734876 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-02 15:32:10.203  WARN 734876 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-02 15:32:10.204  WARN 734876 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-02 15:32:10.204  WARN 734876 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-02 15:32:10.712  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[GET],produces=[application/json || application/xml]}" onto public com.khoubyari.example.domain.Hotel com.khoubyari.example.api.rest.HotelController.getHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2023-05-02 15:32:10.713  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[PUT],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.updateHotel(java.lang.Long,com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-02 15:32:10.713  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[DELETE],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.deleteHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-02 15:32:10.714  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[GET],produces=[application/json || application/xml]}" onto public org.springframework.data.domain.Page<com.khoubyari.example.domain.Hotel> com.khoubyari.example.api.rest.HotelController.getAllHotel(java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-02 15:32:10.715  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[POST],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.createHotel(com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-02 15:32:10.716  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2023-05-02 15:32:10.720  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2023-05-02 15:32:10.721  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2023-05-02 15:32:10.722  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2023-05-02 15:32:10.726  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-02 15:32:10.727  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2023-05-02 15:32:11.291  INFO 734876 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Tue May 02 15:32:06 IST 2023]; root of context hierarchy
+2023-05-02 15:32:11.341  INFO 734876 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-02 15:32:11.342  INFO 734876 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-02 15:32:11.378  INFO 734876 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-02 15:32:11.605  INFO 734876 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: c044b615-e242-402a-9fb2-e25460111f8e
+
+2023-05-02 15:32:11.644  INFO 734876 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2023-05-02 15:32:11.644  INFO 734876 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@48860139, []
+2023-05-02 15:32:11.690  INFO 734876 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@1edac3b4, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7641ed02, org.springframework.security.web.context.SecurityContextPersistenceFilter@7294a684, org.springframework.security.web.header.HeaderWriterFilter@5c0272e0, org.springframework.security.web.csrf.CsrfFilter@59014efe, org.springframework.security.web.authentication.logout.LogoutFilter@24b38e8f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40b70f31, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c8e5ac4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ebed2b3, org.springframework.security.web.session.SessionManagementFilter@7d551ec6, org.springframework.security.web.access.ExceptionTranslationFilter@4bdef487]
+2023-05-02 15:32:12.159  WARN 734876 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2023-05-02 15:32:12.162  INFO 734876 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2023-05-02 15:32:12.162  INFO 734876 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-05-02 15:32:12.177  INFO 734876 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-05-02 15:32:12.184  INFO 734876 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-05-02 15:32:12.359  INFO 734876 --- [main] c.k.example.test.HotelControllerTest     : Started HotelControllerTest in 5.735 seconds (JVM running for 6.234)
+2023-05-02 15:32:12.414  INFO 734876 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-02 15:32:12.415  INFO 734876 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-02 15:32:12.430  INFO 734876 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 15 ms
+2023-05-02 15:32:12.509  INFO 734876 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-02 15:32:12.558  INFO 734876 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-02 15:32:12.590  INFO 734876 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-02 15:32:12.603  INFO 734876 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-02 15:32:12.608  INFO 734876 --- [main] c.k.example.api.rest.HotelController     : ResourceNotFoundException handler:resource not found
+2023-05-02 15:32:12.615  INFO 734876 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-02 15:32:12.616  INFO 734876 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-02 15:32:12.620  INFO 734876 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 4 ms
+2023-05-02 15:32:12.622  INFO 734876 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-02 15:32:12.627  INFO 734876 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.updateHotel(Long,Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-02 15:32:12.634  INFO 734876 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-02 15:32:12.638  INFO 734876 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-02 15:32:12.646  INFO 734876 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Tue May 02 15:32:06 IST 2023]; root of context hierarchy
+2023-05-02 15:32:12.649  INFO 734876 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2023-05-02 15:32:12.657  INFO 734876 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-02 15:32:12.658  INFO 734876 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-02 15:32:12.664 ERROR 734876 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000231: Schema export unsuccessful
+
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:179) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:155) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:144) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1483) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1458) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:457) ~[h2-1.4.193.jar:1.4.193]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:126) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:79) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81) ~[tomcat-jdbc-8.5.23.jar:na]
+	at com.sun.proxy.$Proxy97.getAutoCommit(Unknown Source) ~[na:na]
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:34) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:35) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:425) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:375) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:371) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:1081) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.jpa.internal.EntityManagerFactoryImpl.close(EntityManagerFactoryImpl.java:347) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:473) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:645) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at com.sun.proxy.$Proxy107.close(Unknown Source) [na:na]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:565) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1032) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1008) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:929) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+
+2023-05-02 15:32:12.665  INFO 734876 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 11:53:07.530  INFO 920115 --- [main] c.k.example.test.HotelControllerTest     : Starting HotelControllerTest on adi123 with PID 920115 (started by aditya in /home/aditya/Documents/sbapp/spring-boot-rest-example)
+2023-05-03 11:53:07.532  INFO 920115 --- [main] c.k.example.test.HotelControllerTest     : The following profiles are active: test
+2023-05-03 11:53:07.566  INFO 920115 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 11:53:07 IST 2023]; root of context hierarchy
+2023-05-03 11:53:08.923  INFO 920115 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7a420215] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-03 11:53:09.557  INFO 920115 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2023-05-03 11:53:09.570  INFO 920115 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-05-03 11:53:09.696  INFO 920115 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2023-05-03 11:53:09.697  INFO 920115 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2023-05-03 11:53:09.699  INFO 920115 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2023-05-03 11:53:09.728  INFO 920115 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2023-05-03 11:53:09.819  INFO 920115 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-03 11:53:10.166  INFO 920115 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 11:53:10.176  INFO 920115 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 11:53:10.206  INFO 920115 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 11:53:10.535  WARN 920115 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 11:53:10.536  WARN 920115 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 11:53:10.536  WARN 920115 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 11:53:11.053  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[DELETE],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.deleteHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 11:53:11.054  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[GET],produces=[application/json || application/xml]}" onto public com.khoubyari.example.domain.Hotel com.khoubyari.example.api.rest.HotelController.getHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2023-05-03 11:53:11.055  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[PUT],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.updateHotel(java.lang.Long,com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 11:53:11.055  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[GET],produces=[application/json || application/xml]}" onto public org.springframework.data.domain.Page<com.khoubyari.example.domain.Hotel> com.khoubyari.example.api.rest.HotelController.getAllHotel(java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 11:53:11.056  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[POST],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.createHotel(com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 11:53:11.057  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2023-05-03 11:53:11.060  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2023-05-03 11:53:11.061  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2023-05-03 11:53:11.062  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2023-05-03 11:53:11.066  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 11:53:11.067  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2023-05-03 11:53:11.742  INFO 920115 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 11:53:07 IST 2023]; root of context hierarchy
+2023-05-03 11:53:11.793  INFO 920115 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 11:53:11.793  INFO 920115 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 11:53:11.829  INFO 920115 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 11:53:12.073  INFO 920115 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 83bac4cc-20b6-48dd-9ebe-81fc31e9d1f1
+
+2023-05-03 11:53:12.118  INFO 920115 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2023-05-03 11:53:12.118  INFO 920115 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@6ffdbeef, []
+2023-05-03 11:53:12.167  INFO 920115 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@5b55c3d6, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c8e5ac4, org.springframework.security.web.context.SecurityContextPersistenceFilter@aa23f11, org.springframework.security.web.header.HeaderWriterFilter@3e2578ea, org.springframework.security.web.csrf.CsrfFilter@4aa517c3, org.springframework.security.web.authentication.logout.LogoutFilter@111cbcda, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79e90571, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7bc8ffbc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1800c1e3, org.springframework.security.web.session.SessionManagementFilter@774304ca, org.springframework.security.web.access.ExceptionTranslationFilter@2006fdaa]
+2023-05-03 11:53:12.612  WARN 920115 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2023-05-03 11:53:12.615  INFO 920115 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2023-05-03 11:53:12.616  INFO 920115 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-05-03 11:53:12.632  INFO 920115 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-05-03 11:53:12.640  INFO 920115 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-05-03 11:53:12.783  INFO 920115 --- [main] c.k.example.test.HotelControllerTest     : Started HotelControllerTest in 5.546 seconds (JVM running for 6.078)
+2023-05-03 11:53:12.835  INFO 920115 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 11:53:12.835  INFO 920115 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 11:53:12.851  INFO 920115 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 16 ms
+2023-05-03 11:53:12.931  INFO 920115 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 11:53:12.984  INFO 920115 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 11:53:13.029  INFO 920115 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 11:53:13.044  INFO 920115 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 11:53:13.050  INFO 920115 --- [main] c.k.example.api.rest.HotelController     : ResourceNotFoundException handler:resource not found
+2023-05-03 11:53:13.061  INFO 920115 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 11:53:13.061  INFO 920115 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 11:53:13.067  INFO 920115 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 6 ms
+2023-05-03 11:53:13.070  INFO 920115 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 11:53:13.074  INFO 920115 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.updateHotel(Long,Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 11:53:13.084  INFO 920115 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 11:53:13.088  INFO 920115 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 11:53:13.100  INFO 920115 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 11:53:07 IST 2023]; root of context hierarchy
+2023-05-03 11:53:13.103  INFO 920115 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2023-05-03 11:53:13.109  INFO 920115 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 11:53:13.110  INFO 920115 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 11:53:13.115 ERROR 920115 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000231: Schema export unsuccessful
+
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:179) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:155) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:144) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1483) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1458) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:457) ~[h2-1.4.193.jar:1.4.193]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:126) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:79) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81) ~[tomcat-jdbc-8.5.23.jar:na]
+	at com.sun.proxy.$Proxy97.getAutoCommit(Unknown Source) ~[na:na]
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:34) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:35) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:425) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:375) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:371) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:1081) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.jpa.internal.EntityManagerFactoryImpl.close(EntityManagerFactoryImpl.java:347) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:473) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:645) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at com.sun.proxy.$Proxy107.close(Unknown Source) [na:na]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:565) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1032) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1008) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:929) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+
+2023-05-03 11:53:13.116  INFO 920115 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 12:19:18.891  INFO 932185 --- [main] c.k.example.test.HotelControllerTest     : Starting HotelControllerTest on adi123 with PID 932185 (started by aditya in /home/aditya/Documents/sbapp/spring-boot-rest-example)
+2023-05-03 12:19:18.894  INFO 932185 --- [main] c.k.example.test.HotelControllerTest     : The following profiles are active: test
+2023-05-03 12:19:18.929  INFO 932185 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 12:19:18 IST 2023]; root of context hierarchy
+2023-05-03 12:19:20.285  INFO 932185 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$84d51e3c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-03 12:19:20.942  INFO 932185 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2023-05-03 12:19:20.959  INFO 932185 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-05-03 12:19:21.067  INFO 932185 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2023-05-03 12:19:21.068  INFO 932185 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2023-05-03 12:19:21.069  INFO 932185 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2023-05-03 12:19:21.098  INFO 932185 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2023-05-03 12:19:21.179  INFO 932185 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-03 12:19:21.567  INFO 932185 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 12:19:21.577  INFO 932185 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 12:19:21.605  INFO 932185 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 12:19:22.078  WARN 932185 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 12:19:22.078  WARN 932185 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 12:19:22.079  WARN 932185 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 12:19:22.474  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[GET],produces=[application/json || application/xml]}" onto public com.khoubyari.example.domain.Hotel com.khoubyari.example.api.rest.HotelController.getHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2023-05-03 12:19:22.475  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[PUT],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.updateHotel(java.lang.Long,com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:19:22.477  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[DELETE],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.deleteHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:19:22.477  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[POST],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.createHotel(com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:19:22.478  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[GET],produces=[application/json || application/xml]}" onto public org.springframework.data.domain.Page<com.khoubyari.example.domain.Hotel> com.khoubyari.example.api.rest.HotelController.getAllHotel(java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:19:22.479  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2023-05-03 12:19:22.483  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2023-05-03 12:19:22.484  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2023-05-03 12:19:22.484  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2023-05-03 12:19:22.487  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:19:22.487  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2023-05-03 12:19:22.961  INFO 932185 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 12:19:18 IST 2023]; root of context hierarchy
+2023-05-03 12:19:23.008  INFO 932185 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 12:19:23.008  INFO 932185 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 12:19:23.042  INFO 932185 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 12:19:23.255  INFO 932185 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: cd3a877c-058c-4fed-9e4d-e53867f4e124
+
+2023-05-03 12:19:23.292  INFO 932185 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2023-05-03 12:19:23.292  INFO 932185 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@c6244e7, []
+2023-05-03 12:19:23.342  INFO 932185 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@1800c1e3, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b8b4846, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c0272e0, org.springframework.security.web.header.HeaderWriterFilter@6684589a, org.springframework.security.web.csrf.CsrfFilter@2f3cd727, org.springframework.security.web.authentication.logout.LogoutFilter@5b55c3d6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6614ecca, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1aaaabd1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e357792, org.springframework.security.web.session.SessionManagementFilter@4bdef487, org.springframework.security.web.access.ExceptionTranslationFilter@4caf875c]
+2023-05-03 12:19:23.836  WARN 932185 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2023-05-03 12:19:23.839  INFO 932185 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2023-05-03 12:19:23.839  INFO 932185 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-05-03 12:19:23.854  INFO 932185 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-05-03 12:19:23.861  INFO 932185 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-05-03 12:19:23.996  INFO 932185 --- [main] c.k.example.test.HotelControllerTest     : Started HotelControllerTest in 5.393 seconds (JVM running for 5.912)
+2023-05-03 12:19:24.044  INFO 932185 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 12:19:24.044  INFO 932185 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 12:19:24.060  INFO 932185 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 15 ms
+2023-05-03 12:19:24.128  INFO 932185 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:19:24.178  INFO 932185 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:19:24.212  INFO 932185 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:19:24.224  INFO 932185 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:19:24.229  INFO 932185 --- [main] c.k.example.api.rest.HotelController     : ResourceNotFoundException handler:resource not found
+2023-05-03 12:19:24.237  INFO 932185 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 12:19:24.238  INFO 932185 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 12:19:24.241  INFO 932185 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2023-05-03 12:19:24.243  INFO 932185 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:19:24.247  INFO 932185 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.updateHotel(Long,Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:19:24.253  INFO 932185 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:19:24.258  INFO 932185 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:19:24.265  INFO 932185 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 12:19:18 IST 2023]; root of context hierarchy
+2023-05-03 12:19:24.269  INFO 932185 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2023-05-03 12:19:24.275  INFO 932185 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 12:19:24.276  INFO 932185 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 12:19:24.280 ERROR 932185 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000231: Schema export unsuccessful
+
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:179) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:155) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:144) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1483) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1458) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:457) ~[h2-1.4.193.jar:1.4.193]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:126) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:79) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81) ~[tomcat-jdbc-8.5.23.jar:na]
+	at com.sun.proxy.$Proxy97.getAutoCommit(Unknown Source) ~[na:na]
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:34) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:35) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:425) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:375) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:371) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:1081) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.jpa.internal.EntityManagerFactoryImpl.close(EntityManagerFactoryImpl.java:347) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:473) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:645) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at com.sun.proxy.$Proxy107.close(Unknown Source) [na:na]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:565) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1032) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1008) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:929) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+
+2023-05-03 12:19:24.281  INFO 932185 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 12:40:24.525  INFO 941234 --- [main] c.k.example.test.HotelControllerTest     : Starting HotelControllerTest on adi123 with PID 941234 (started by aditya in /home/aditya/Documents/sbapp/spring-boot-rest-example)
+2023-05-03 12:40:24.526  INFO 941234 --- [main] c.k.example.test.HotelControllerTest     : The following profiles are active: test
+2023-05-03 12:40:24.591  INFO 941234 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 12:40:24 IST 2023]; root of context hierarchy
+2023-05-03 12:40:27.675  INFO 941234 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a3a75360] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-03 12:40:28.672  INFO 941234 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2023-05-03 12:40:28.700  INFO 941234 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-05-03 12:40:28.869  INFO 941234 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2023-05-03 12:40:28.871  INFO 941234 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2023-05-03 12:40:28.873  INFO 941234 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2023-05-03 12:40:28.927  INFO 941234 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2023-05-03 12:40:29.045  INFO 941234 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-03 12:40:29.571  INFO 941234 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 12:40:29.589  INFO 941234 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 12:40:29.631  INFO 941234 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 12:40:30.220  WARN 941234 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 12:40:30.220  WARN 941234 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 12:40:30.221  WARN 941234 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 12:40:30.924  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[GET],produces=[application/json || application/xml]}" onto public com.khoubyari.example.domain.Hotel com.khoubyari.example.api.rest.HotelController.getHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2023-05-03 12:40:30.926  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[PUT],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.updateHotel(java.lang.Long,com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:40:30.927  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[DELETE],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.deleteHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:40:30.928  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[GET],produces=[application/json || application/xml]}" onto public org.springframework.data.domain.Page<com.khoubyari.example.domain.Hotel> com.khoubyari.example.api.rest.HotelController.getAllHotel(java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:40:30.928  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[POST],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.createHotel(com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:40:30.930  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2023-05-03 12:40:30.934  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2023-05-03 12:40:30.935  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2023-05-03 12:40:30.935  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2023-05-03 12:40:30.940  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:40:30.941  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2023-05-03 12:40:31.687  INFO 941234 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 12:40:24 IST 2023]; root of context hierarchy
+2023-05-03 12:40:31.774  INFO 941234 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 12:40:31.775  INFO 941234 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 12:40:31.838  INFO 941234 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 12:40:32.294  INFO 941234 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 08b86d99-808c-47a4-a49b-7a0321af6c34
+
+2023-05-03 12:40:32.373  INFO 941234 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2023-05-03 12:40:32.374  INFO 941234 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@6d7556a8, []
+2023-05-03 12:40:32.502  INFO 941234 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@5cf072ea, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1edac3b4, org.springframework.security.web.context.SecurityContextPersistenceFilter@43e7f104, org.springframework.security.web.header.HeaderWriterFilter@3e595da3, org.springframework.security.web.csrf.CsrfFilter@7c840fe3, org.springframework.security.web.authentication.logout.LogoutFilter@5ac646b3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7cbe3a05, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b55c3d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7641ed02, org.springframework.security.web.session.SessionManagementFilter@79e90571, org.springframework.security.web.access.ExceptionTranslationFilter@4cf5d999]
+2023-05-03 12:40:33.153  WARN 941234 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2023-05-03 12:40:33.158  INFO 941234 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2023-05-03 12:40:33.158  INFO 941234 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-05-03 12:40:33.183  INFO 941234 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-05-03 12:40:33.195  INFO 941234 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-05-03 12:40:33.430  INFO 941234 --- [main] c.k.example.test.HotelControllerTest     : Started HotelControllerTest in 9.374 seconds (JVM running for 10.318)
+2023-05-03 12:40:33.506  INFO 941234 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 12:40:33.506  INFO 941234 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 12:40:33.527  INFO 941234 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 21 ms
+2023-05-03 12:40:33.636  INFO 941234 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:40:33.716  INFO 941234 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:40:33.766  INFO 941234 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:40:33.785  INFO 941234 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:40:33.792  INFO 941234 --- [main] c.k.example.api.rest.HotelController     : ResourceNotFoundException handler:resource not found
+2023-05-03 12:40:33.804  INFO 941234 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 12:40:33.804  INFO 941234 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 12:40:33.809  INFO 941234 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 5 ms
+2023-05-03 12:40:33.813  INFO 941234 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:40:33.819  INFO 941234 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.updateHotel(Long,Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:40:33.829  INFO 941234 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:40:33.834  INFO 941234 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:40:33.844  INFO 941234 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 12:40:24 IST 2023]; root of context hierarchy
+2023-05-03 12:40:33.848  INFO 941234 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2023-05-03 12:40:33.856  INFO 941234 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 12:40:33.857  INFO 941234 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 12:40:33.864 ERROR 941234 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000231: Schema export unsuccessful
+
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:179) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:155) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:144) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1483) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1458) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:457) ~[h2-1.4.193.jar:1.4.193]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:126) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:79) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81) ~[tomcat-jdbc-8.5.23.jar:na]
+	at com.sun.proxy.$Proxy97.getAutoCommit(Unknown Source) ~[na:na]
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:34) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:35) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:425) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:375) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:371) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:1081) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.jpa.internal.EntityManagerFactoryImpl.close(EntityManagerFactoryImpl.java:347) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:473) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:645) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at com.sun.proxy.$Proxy107.close(Unknown Source) [na:na]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:565) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1032) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1008) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:929) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+
+2023-05-03 12:40:33.890  INFO 941234 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 12:50:46.058  INFO 945826 --- [main] c.k.example.test.HotelControllerTest     : Starting HotelControllerTest on adi123 with PID 945826 (started by aditya in /home/aditya/Documents/sbapp/spring-boot-rest-example)
+2023-05-03 12:50:46.059  INFO 945826 --- [main] c.k.example.test.HotelControllerTest     : The following profiles are active: test
+2023-05-03 12:50:46.127  INFO 945826 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 12:50:46 IST 2023]; root of context hierarchy
+2023-05-03 12:50:49.319  INFO 945826 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a3a75360] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-03 12:50:50.533  INFO 945826 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2023-05-03 12:50:50.565  INFO 945826 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-05-03 12:50:50.888  INFO 945826 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2023-05-03 12:50:50.890  INFO 945826 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2023-05-03 12:50:50.892  INFO 945826 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2023-05-03 12:50:50.948  INFO 945826 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2023-05-03 12:50:51.107  INFO 945826 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-03 12:50:51.746  INFO 945826 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 12:50:51.763  INFO 945826 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 12:50:51.809  INFO 945826 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 12:50:52.533  WARN 945826 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 12:50:52.535  WARN 945826 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 12:50:52.535  WARN 945826 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 12:50:53.847  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[DELETE],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.deleteHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:50:53.850  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[GET],produces=[application/json || application/xml]}" onto public com.khoubyari.example.domain.Hotel com.khoubyari.example.api.rest.HotelController.getHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2023-05-03 12:50:53.851  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[PUT],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.updateHotel(java.lang.Long,com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:50:53.853  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[GET],produces=[application/json || application/xml]}" onto public org.springframework.data.domain.Page<com.khoubyari.example.domain.Hotel> com.khoubyari.example.api.rest.HotelController.getAllHotel(java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:50:53.854  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[POST],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.createHotel(com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:50:53.856  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2023-05-03 12:50:53.862  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2023-05-03 12:50:53.863  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2023-05-03 12:50:53.864  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2023-05-03 12:50:53.871  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 12:50:53.873  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2023-05-03 12:50:54.935  INFO 945826 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 12:50:46 IST 2023]; root of context hierarchy
+2023-05-03 12:50:55.046  INFO 945826 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 12:50:55.047  INFO 945826 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 12:50:55.120  INFO 945826 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 12:50:55.632  INFO 945826 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 3b7a307b-d541-4b94-98a1-6a57e4e72c10
+
+2023-05-03 12:50:55.714  INFO 945826 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2023-05-03 12:50:55.716  INFO 945826 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@48860139, []
+2023-05-03 12:50:55.814  INFO 945826 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@1edac3b4, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7641ed02, org.springframework.security.web.context.SecurityContextPersistenceFilter@7294a684, org.springframework.security.web.header.HeaderWriterFilter@5c0272e0, org.springframework.security.web.csrf.CsrfFilter@59014efe, org.springframework.security.web.authentication.logout.LogoutFilter@24b38e8f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40b70f31, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c8e5ac4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ebed2b3, org.springframework.security.web.session.SessionManagementFilter@7d551ec6, org.springframework.security.web.access.ExceptionTranslationFilter@4bdef487]
+2023-05-03 12:50:56.767  WARN 945826 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2023-05-03 12:50:56.772  INFO 945826 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2023-05-03 12:50:56.773  INFO 945826 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-05-03 12:50:56.809  INFO 945826 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-05-03 12:50:56.826  INFO 945826 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-05-03 12:50:57.262  INFO 945826 --- [main] c.k.example.test.HotelControllerTest     : Started HotelControllerTest in 11.784 seconds (JVM running for 12.616)
+2023-05-03 12:50:57.372  INFO 945826 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 12:50:57.373  INFO 945826 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 12:50:57.411  INFO 945826 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 38 ms
+2023-05-03 12:50:57.574  INFO 945826 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:50:57.688  INFO 945826 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:50:57.755  INFO 945826 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:50:57.799  INFO 945826 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:50:57.814  INFO 945826 --- [main] c.k.example.api.rest.HotelController     : ResourceNotFoundException handler:resource not found
+2023-05-03 12:50:57.832  INFO 945826 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 12:50:57.833  INFO 945826 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 12:50:57.842  INFO 945826 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 9 ms
+2023-05-03 12:50:57.847  INFO 945826 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:50:57.855  INFO 945826 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.updateHotel(Long,Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:50:57.873  INFO 945826 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:50:57.881  INFO 945826 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 12:50:57.907  INFO 945826 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@15888343: startup date [Wed May 03 12:50:46 IST 2023]; root of context hierarchy
+2023-05-03 12:50:57.911  INFO 945826 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2023-05-03 12:50:57.935  INFO 945826 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 12:50:57.937  INFO 945826 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 12:50:57.951 ERROR 945826 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000231: Schema export unsuccessful
+
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:179) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:155) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:144) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1483) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1458) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:457) ~[h2-1.4.193.jar:1.4.193]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:126) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:79) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81) ~[tomcat-jdbc-8.5.23.jar:na]
+	at com.sun.proxy.$Proxy97.getAutoCommit(Unknown Source) ~[na:na]
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:34) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:35) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:425) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:375) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:371) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:1081) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.jpa.internal.EntityManagerFactoryImpl.close(EntityManagerFactoryImpl.java:347) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:473) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:645) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at com.sun.proxy.$Proxy107.close(Unknown Source) [na:na]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:565) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1032) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1008) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:929) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+
+2023-05-03 12:50:57.955  INFO 945826 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 14:06:15.779  INFO 977815 --- [main] com.khoubyari.example.Application        : Starting Application v0.5.0 on adi123 with PID 977815 (/home/aditya/Documents/sbapp/spring-boot-rest-example/target/spring-boot-rest-example-0.5.0.war started by aditya in /home/aditya/Documents/sbapp/spring-boot-rest-example)
+2023-05-03 14:06:15.782  INFO 977815 --- [main] com.khoubyari.example.Application        : The following profiles are active: test
+2023-05-03 14:06:15.852  INFO 977815 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64b8f8f4: startup date [Wed May 03 14:06:15 IST 2023]; root of context hierarchy
+2023-05-03 14:06:17.549  INFO 977815 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e5ba36eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-03 14:06:18.170  INFO 977815 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8090 (http)
+2023-05-03 14:06:18.186  INFO 977815 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-03 14:06:18.187  INFO 977815 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2023-05-03 14:06:18.954  INFO 977815 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-03 14:06:18.955  INFO 977815 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3106 ms
+2023-05-03 14:06:19.431  INFO 977815 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2023-05-03 14:06:19.431  INFO 977815 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2023-05-03 14:06:19.432  INFO 977815 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2023-05-03 14:06:19.432  INFO 977815 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2023-05-03 14:06:19.432  INFO 977815 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2023-05-03 14:06:19.433  INFO 977815 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2023-05-03 14:06:19.434  INFO 977815 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2023-05-03 14:06:19.434  INFO 977815 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2023-05-03 14:06:19.434  INFO 977815 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2023-05-03 14:06:19.435  INFO 977815 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'webServlet' to [/h2-console/*]
+2023-05-03 14:06:20.119  INFO 977815 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2023-05-03 14:06:20.139  INFO 977815 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-05-03 14:06:20.234  INFO 977815 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2023-05-03 14:06:20.235  INFO 977815 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2023-05-03 14:06:20.237  INFO 977815 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2023-05-03 14:06:20.287  INFO 977815 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2023-05-03 14:06:20.550  INFO 977815 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-03 14:06:21.056  INFO 977815 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 14:06:21.067  INFO 977815 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 14:06:21.109  INFO 977815 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 14:06:21.515  WARN 977815 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 14:06:21.515  WARN 977815 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 14:06:21.516  WARN 977815 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 14:06:22.055  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[POST],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.createHotel(com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:06:22.057  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[GET],produces=[application/json || application/xml]}" onto public com.khoubyari.example.domain.Hotel com.khoubyari.example.api.rest.HotelController.getHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2023-05-03 14:06:22.058  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[PUT],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.updateHotel(java.lang.Long,com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:06:22.059  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[DELETE],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.deleteHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:06:22.059  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[GET],produces=[application/json || application/xml]}" onto public org.springframework.data.domain.Page<com.khoubyari.example.domain.Hotel> com.khoubyari.example.api.rest.HotelController.getAllHotel(java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:06:22.060  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2023-05-03 14:06:22.064  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2023-05-03 14:06:22.066  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2023-05-03 14:06:22.067  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2023-05-03 14:06:22.070  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:06:22.070  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2023-05-03 14:06:22.597  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64b8f8f4: startup date [Wed May 03 14:06:15 IST 2023]; root of context hierarchy
+2023-05-03 14:06:22.671  INFO 977815 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 14:06:22.671  INFO 977815 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 14:06:22.725  INFO 977815 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 14:06:23.086  INFO 977815 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 76f13768-dd3c-4f78-b1b8-7a8f29e13fda
+
+2023-05-03 14:06:23.152  INFO 977815 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2023-05-03 14:06:23.152  INFO 977815 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@6e46d9f4, []
+2023-05-03 14:06:23.240  INFO 977815 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@7de0c6ae, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a486d78, org.springframework.security.web.context.SecurityContextPersistenceFilter@b91d8c4, org.springframework.security.web.header.HeaderWriterFilter@7f811d00, org.springframework.security.web.csrf.CsrfFilter@74bdc168, org.springframework.security.web.authentication.logout.LogoutFilter@2f08c4b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@319dead1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@754777cd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cdc3aae, org.springframework.security.web.session.SessionManagementFilter@4089713, org.springframework.security.web.access.ExceptionTranslationFilter@611f8234]
+2023-05-03 14:06:23.741  INFO 977815 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f38e6: startup date [Wed May 03 14:06:23 IST 2023]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64b8f8f4
+2023-05-03 14:06:23.773  INFO 977815 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'handlerExceptionResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration; factoryMethodName=handlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=endpointWebMvcChildContextConfiguration; factoryMethodName=compositeHandlerExceptionResolver; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcChildContextConfiguration]
+2023-05-03 14:06:23.836  INFO 977815 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8091 (http)
+2023-05-03 14:06:23.837  INFO 977815 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-03 14:06:23.838  INFO 977815 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2023-05-03 14:06:24.582  INFO 977815 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-05-03 14:06:24.582  INFO 977815 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 841 ms
+2023-05-03 14:06:24.594  INFO 977815 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2023-05-03 14:06:24.595  INFO 977815 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2023-05-03 14:06:24.695  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2023-05-03 14:06:24.696  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2023-05-03 14:06:24.696  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2023-05-03 14:06:24.697  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2023-05-03 14:06:24.697  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2023-05-03 14:06:24.699  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2023-05-03 14:06:24.700  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2023-05-03 14:06:24.700  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2023-05-03 14:06:24.701  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2023-05-03 14:06:24.701  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2023-05-03 14:06:24.701  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2023-05-03 14:06:24.703  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2023-05-03 14:06:24.703  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2023-05-03 14:06:24.704  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2023-05-03 14:06:24.705  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2023-05-03 14:06:24.705  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2023-05-03 14:06:24.706  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2023-05-03 14:06:24.706  INFO 977815 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2023-05-03 14:06:24.721  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.boot.actuate.endpoint.mvc.ManagementErrorEndpoint.invoke()
+2023-05-03 14:06:24.728  INFO 977815 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 14:06:24.728  INFO 977815 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 14:06:24.750  INFO 977815 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f38e6: startup date [Wed May 03 14:06:23 IST 2023]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64b8f8f4
+2023-05-03 14:06:24.837  INFO 977815 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8091 (http)
+2023-05-03 14:06:24.844  INFO 977815 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2023-05-03 14:06:24.845  INFO 977815 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-05-03 14:06:24.870  INFO 977815 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-05-03 14:06:24.882  INFO 977815 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-05-03 14:06:25.053  INFO 977815 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8090 (http)
+2023-05-03 14:06:25.058  INFO 977815 --- [main] com.khoubyari.example.Application        : Started Application in 9.737 seconds (JVM running for 10.2)
+2023-05-03 14:06:38.013  INFO 977815 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64b8f8f4: startup date [Wed May 03 14:06:15 IST 2023]; root of context hierarchy
+2023-05-03 14:06:38.017  INFO 977815 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@120f38e6: startup date [Wed May 03 14:06:23 IST 2023]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64b8f8f4
+2023-05-03 14:06:38.135  INFO 977815 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2023-05-03 14:06:38.146  INFO 977815 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 14:06:38.147  INFO 977815 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 14:06:38.160  INFO 977815 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 14:30:59.342  INFO 988546 --- [main] c.k.example.test.HotelControllerTest     : Starting HotelControllerTest on adi123 with PID 988546 (started by root in /home/aditya/Documents/sbapp/spring-boot-rest-example)
+2023-05-03 14:30:59.342  INFO 988546 --- [main] c.k.example.test.HotelControllerTest     : The following profiles are active: test
+2023-05-03 14:30:59.374  INFO 988546 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@14fc5f04: startup date [Wed May 03 14:30:59 IST 2023]; root of context hierarchy
+2023-05-03 14:31:00.926  INFO 988546 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cf28929c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-03 14:31:01.560  INFO 988546 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2023-05-03 14:31:01.583  INFO 988546 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-05-03 14:31:01.763  INFO 988546 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2023-05-03 14:31:01.764  INFO 988546 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2023-05-03 14:31:01.766  INFO 988546 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2023-05-03 14:31:01.797  INFO 988546 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2023-05-03 14:31:01.890  INFO 988546 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-03 14:31:02.238  INFO 988546 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 14:31:02.247  INFO 988546 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 14:31:02.274  INFO 988546 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 14:31:02.605  WARN 988546 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 14:31:02.606  WARN 988546 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 14:31:02.606  WARN 988546 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 14:31:03.131  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[PUT],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.updateHotel(java.lang.Long,com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:31:03.132  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[DELETE],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.deleteHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:31:03.133  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[GET],produces=[application/json || application/xml]}" onto public org.springframework.data.domain.Page<com.khoubyari.example.domain.Hotel> com.khoubyari.example.api.rest.HotelController.getAllHotel(java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:31:03.134  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[GET],produces=[application/json || application/xml]}" onto public com.khoubyari.example.domain.Hotel com.khoubyari.example.api.rest.HotelController.getHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2023-05-03 14:31:03.135  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[POST],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.createHotel(com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:31:03.136  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2023-05-03 14:31:03.140  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2023-05-03 14:31:03.142  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2023-05-03 14:31:03.142  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2023-05-03 14:31:03.147  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:31:03.148  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2023-05-03 14:31:03.762  INFO 988546 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@14fc5f04: startup date [Wed May 03 14:30:59 IST 2023]; root of context hierarchy
+2023-05-03 14:31:03.825  INFO 988546 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 14:31:03.825  INFO 988546 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 14:31:03.875  INFO 988546 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 14:31:04.107  INFO 988546 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 72fadc32-b2c5-4af5-a16e-1d503550bb68
+
+2023-05-03 14:31:04.160  INFO 988546 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2023-05-03 14:31:04.161  INFO 988546 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@48860139, []
+2023-05-03 14:31:04.221  INFO 988546 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@4e6280de, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2fca282c, org.springframework.security.web.context.SecurityContextPersistenceFilter@7294a684, org.springframework.security.web.header.HeaderWriterFilter@5c0272e0, org.springframework.security.web.csrf.CsrfFilter@59014efe, org.springframework.security.web.authentication.logout.LogoutFilter@4e357792, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6651efa4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75663443, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a2653a0, org.springframework.security.web.session.SessionManagementFilter@7d551ec6, org.springframework.security.web.access.ExceptionTranslationFilter@4bdef487]
+2023-05-03 14:31:04.670  WARN 988546 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2023-05-03 14:31:04.673  INFO 988546 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2023-05-03 14:31:04.673  INFO 988546 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-05-03 14:31:04.691  INFO 988546 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-05-03 14:31:04.698  INFO 988546 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-05-03 14:31:04.835  INFO 988546 --- [main] c.k.example.test.HotelControllerTest     : Started HotelControllerTest in 5.804 seconds (JVM running for 6.322)
+2023-05-03 14:31:04.903  INFO 988546 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 14:31:04.904  INFO 988546 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 14:31:04.922  INFO 988546 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 18 ms
+2023-05-03 14:31:05.014  INFO 988546 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:31:05.080  INFO 988546 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:31:05.121  INFO 988546 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:31:05.133  INFO 988546 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:31:05.137  INFO 988546 --- [main] c.k.example.api.rest.HotelController     : ResourceNotFoundException handler:resource not found
+2023-05-03 14:31:05.146  INFO 988546 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 14:31:05.146  INFO 988546 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 14:31:05.149  INFO 988546 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2023-05-03 14:31:05.151  INFO 988546 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:31:05.155  INFO 988546 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.updateHotel(Long,Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:31:05.163  INFO 988546 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:31:05.166  INFO 988546 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:31:05.172  INFO 988546 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@14fc5f04: startup date [Wed May 03 14:30:59 IST 2023]; root of context hierarchy
+2023-05-03 14:31:05.175  INFO 988546 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2023-05-03 14:31:05.181  INFO 988546 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 14:31:05.182  INFO 988546 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 14:31:05.187 ERROR 988546 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000231: Schema export unsuccessful
+
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:179) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:155) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:144) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1483) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1458) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:457) ~[h2-1.4.193.jar:1.4.193]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:126) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:79) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81) ~[tomcat-jdbc-8.5.23.jar:na]
+	at com.sun.proxy.$Proxy97.getAutoCommit(Unknown Source) ~[na:na]
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:34) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:35) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:425) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:375) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:371) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:1081) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.jpa.internal.EntityManagerFactoryImpl.close(EntityManagerFactoryImpl.java:347) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:473) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:645) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at com.sun.proxy.$Proxy107.close(Unknown Source) [na:na]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:565) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1032) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1008) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:929) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+
+2023-05-03 14:31:05.188  INFO 988546 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 14:55:01.626  INFO 998676 --- [main] c.k.example.test.HotelControllerTest     : Starting HotelControllerTest on adi123 with PID 998676 (started by root in /home/aditya/Documents/sbapp/spring-boot-rest-example)
+2023-05-03 14:55:01.628  INFO 998676 --- [main] c.k.example.test.HotelControllerTest     : The following profiles are active: test
+2023-05-03 14:55:01.654  INFO 998676 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@14fc5f04: startup date [Wed May 03 14:55:01 IST 2023]; root of context hierarchy
+2023-05-03 14:55:03.051  INFO 998676 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e4a4584c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-05-03 14:55:03.693  INFO 998676 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2023-05-03 14:55:03.707  INFO 998676 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2023-05-03 14:55:03.863  INFO 998676 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2023-05-03 14:55:03.864  INFO 998676 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2023-05-03 14:55:03.865  INFO 998676 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2023-05-03 14:55:03.895  INFO 998676 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2023-05-03 14:55:03.975  INFO 998676 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-05-03 14:55:04.294  INFO 998676 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 14:55:04.304  INFO 998676 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2023-05-03 14:55:04.330  INFO 998676 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 14:55:04.653  WARN 998676 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 14:55:04.654  WARN 998676 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 14:55:04.654  WARN 998676 --- [main] figurationPropertiesBindingPostProcessor : The @ConfigurationProperties bean class com.khoubyari.example.service.ServiceProperties contains validation constraints but had not been annotated with @Validated.
+2023-05-03 14:55:05.169  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[GET],produces=[application/json || application/xml]}" onto public com.khoubyari.example.domain.Hotel com.khoubyari.example.api.rest.HotelController.getHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2023-05-03 14:55:05.170  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[PUT],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.updateHotel(java.lang.Long,com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:55:05.171  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels/{id}],methods=[DELETE],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.deleteHotel(java.lang.Long,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:55:05.171  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[POST],consumes=[application/json || application/xml],produces=[application/json || application/xml]}" onto public void com.khoubyari.example.api.rest.HotelController.createHotel(com.khoubyari.example.domain.Hotel,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:55:05.172  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/example/v1/hotels],methods=[GET],produces=[application/json || application/xml]}" onto public org.springframework.data.domain.Page<com.khoubyari.example.domain.Hotel> com.khoubyari.example.api.rest.HotelController.getAllHotel(java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:55:05.173  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2023-05-03 14:55:05.176  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2023-05-03 14:55:05.176  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2023-05-03 14:55:05.177  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2023-05-03 14:55:05.180  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2023-05-03 14:55:05.181  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2023-05-03 14:55:05.670  INFO 998676 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@14fc5f04: startup date [Wed May 03 14:55:01 IST 2023]; root of context hierarchy
+2023-05-03 14:55:05.719  INFO 998676 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 14:55:05.720  INFO 998676 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 14:55:05.756  INFO 998676 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2023-05-03 14:55:05.976  INFO 998676 --- [main] b.a.s.AuthenticationManagerConfiguration : 
+
+Using default security password: 70d3f0b0-f3aa-42bf-a700-a17dce684080
+
+2023-05-03 14:55:06.015  INFO 998676 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/css/**'], Ant [pattern='/js/**'], Ant [pattern='/images/**'], Ant [pattern='/webjars/**'], Ant [pattern='/**/favicon.ico'], Ant [pattern='/error']]], []
+2023-05-03 14:55:06.015  INFO 998676 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@771cbd13, []
+2023-05-03 14:55:06.079  INFO 998676 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration$ApplicationNoWebSecurityConfigurerAdapter$1@2dc73024, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42cd0fc6, org.springframework.security.web.context.SecurityContextPersistenceFilter@7cbe3a05, org.springframework.security.web.header.HeaderWriterFilter@7d551ec6, org.springframework.security.web.csrf.CsrfFilter@6aadb092, org.springframework.security.web.authentication.logout.LogoutFilter@18ca9277, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b55c3d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@784212, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e5864c2, org.springframework.security.web.session.SessionManagementFilter@7bc8ffbc, org.springframework.security.web.access.ExceptionTranslationFilter@aa23f11]
+2023-05-03 14:55:06.542  WARN 998676 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2023-05-03 14:55:06.545  INFO 998676 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2023-05-03 14:55:06.545  INFO 998676 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-05-03 14:55:06.561  INFO 998676 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-05-03 14:55:06.568  INFO 998676 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-05-03 14:55:06.703  INFO 998676 --- [main] c.k.example.test.HotelControllerTest     : Started HotelControllerTest in 5.391 seconds (JVM running for 5.961)
+2023-05-03 14:55:06.757  INFO 998676 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 14:55:06.757  INFO 998676 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 14:55:06.771  INFO 998676 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 14 ms
+2023-05-03 14:55:06.837  INFO 998676 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:55:06.884  INFO 998676 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:55:06.919  INFO 998676 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:55:06.932  INFO 998676 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:55:06.936  INFO 998676 --- [main] c.k.example.api.rest.HotelController     : ResourceNotFoundException handler:resource not found
+2023-05-03 14:55:06.944  INFO 998676 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2023-05-03 14:55:06.944  INFO 998676 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2023-05-03 14:55:06.948  INFO 998676 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 3 ms
+2023-05-03 14:55:06.950  INFO 998676 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.createHotel(Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:55:06.954  INFO 998676 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.updateHotel(Long,Hotel,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:55:06.961  INFO 998676 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(Hotel com.khoubyari.example.api.rest.HotelController.getHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:55:06.965  INFO 998676 --- [main] c.k.example.RestControllerAspect         : :::::AOP Before REST call:::::execution(void com.khoubyari.example.api.rest.HotelController.deleteHotel(Long,HttpServletRequest,HttpServletResponse))
+2023-05-03 14:55:06.972  INFO 998676 --- [Thread-4] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@14fc5f04: startup date [Wed May 03 14:55:01 IST 2023]; root of context hierarchy
+2023-05-03 14:55:06.974  INFO 998676 --- [Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2023-05-03 14:55:06.984  INFO 998676 --- [Thread-4] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03 14:55:06.985  INFO 998676 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2023-05-03 14:55:06.989 ERROR 998676 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000231: Schema export unsuccessful
+
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-193]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:179) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:155) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.message.DbException.get(DbException.java:144) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1483) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1458) ~[h2-1.4.193.jar:1.4.193]
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:457) ~[h2-1.4.193.jar:1.4.193]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:126) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:79) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.23.jar:na]
+	at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81) ~[tomcat-jdbc-8.5.23.jar:na]
+	at com.sun.proxy.$Proxy97.getAutoCommit(Unknown Source) ~[na:na]
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:34) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:35) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:425) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:375) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:371) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:1081) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.jpa.internal.EntityManagerFactoryImpl.close(EntityManagerFactoryImpl.java:347) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_362]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_362]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_362]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_362]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:473) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:645) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at com.sun.proxy.$Proxy107.close(Unknown Source) [na:na]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:565) [spring-orm-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.destroySingletons(FactoryBeanRegistrySupport.java:230) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1032) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1008) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:929) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+
+2023-05-03 14:55:06.990  INFO 998676 --- [Thread-4] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
